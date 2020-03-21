@@ -32,3 +32,10 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'seatbelt_helloworld'
     publishLocation: 'Container'
+
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'seatbelt_anothertry'
+    publishLocation: 'pipeline'
